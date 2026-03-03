@@ -68,7 +68,7 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
     -> Fixed threshold and offset cancelled by user (=> not recommended) 
 
     -> Fixed threshold, moving average filter and offset correction ("long" term drift) via gradient calculation (=> recommended)
-    Drawback: User needs to move detector over object to detect it (conductive and magnetic can only be differentiated, via approach or withdrawing from the      target.
+    Drawback: User needs to move detector over object to detect it (conductive and magnetic can only be differentiated, via approach or withdrawing from the target.)
 
     **BPECS_B:** Frequency counter using the internal or external oscillator. 
 
