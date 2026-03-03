@@ -22,6 +22,7 @@ This project uses microcontroller by Microchip (8-Bit) PIC12/PIC16 to integrate 
       R10, R11 = 1.2K used as the losses are higher than expected (lower Q)
       C6, C7, C8, C9 = 8.2n used due to the too low inductance value 
       fres ~ 94.5 kHz
+      Single LED to visualize a positive or negative gradient is not really optimal from a user perspective.
 
 **BPECS_B:**
 
@@ -56,4 +57,38 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
 
     Probe: BPECS_A PCB probe with fres=94.5 kHz
 
+<h2>Modes of operation </h2>
 
+    **BPECS_A:** Frequency counter using the internal or external oscillator. 
+    
+    -> Fixed threshold based detection and offset determined once (=> not recommended)
+    
+    -> Fixed threshold and offset determined on power-up (=> not recommended) 
+    
+    -> Fixed threshold and offset cancelled by user (=> not recommended) 
+
+    -> Fixed threshold, moving average filter and offset correction ("long" term drift) via gradient calculation (=> recommended)
+    Drawback: User needs to move detector over object to detect it (conductive and magnetic can only be differentiated, via approach or withdrawing from the      target.
+
+    **BPECS_B:** Frequency counter using the internal or external oscillator. 
+
+    -> Fixed threshold based detection and offset determined once (=> not recommended)
+    
+    -> Fixed threshold and offset determined on power-up (=> not recommended) 
+
+    -> Fixed threshold, moving average filter and offset correction ("long" term drift) via gradient calculation (=> recommended)
+    Drawback: User needs to move detector over object to detect it (conductive and magnetic can only be differentiated via approaching or withdrawing from the target.)
+
+    -> Fixed threshold, correct long term drift by difference between two probes  (=> recommended)
+    
+
+<h2>Future changes</h2>
+
+    1) Add different colored LED bar (>=8 LEDs) controlled via a shift register to visualize the slope of the signal. 
+    This allows the user to distinguish between primarily magnetic (permeability >> 1) or conductive (conductivity >> 0) objects.
+    
+    2) Add MCP1640 boost converter to allow operation from single AA or AAA cell. 
+    Boost converter could be switched via reed switch.
+
+    3) ...
+    
