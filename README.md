@@ -8,7 +8,7 @@ HW revisions and description
 
 BPECS_A - 2L HASL PCB / PIC12F1572 / 16 MHz external oscillator (+/- 50 ppm) / output via single LED or UART / With eddy current probe Ls=346 uH, Rs = 29 Ohm at 1 kHz
 
-BPECS_B - 4L ENIG PCB / PIC12F1572 / 16 MHz external oscillator (+/- 50 ppm) / output four LEDs or UART / Without eddy current probe 
+BPECS_B - 4L ENIG PCB / PIC16F1764 / 16 MHz external oscillator (+/- 50 ppm) / output four LEDs and UART / Without eddy current probe 
 
 Principle of operation
 
