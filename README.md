@@ -80,7 +80,16 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
     Drawback: User needs to move detector over object to detect it (conductive and magnetic can only be differentiated via approaching or withdrawing from the target.)
 
     -> Fixed threshold, correct long term drift by difference between two probes  (=> recommended)
+
+<h2>Detection performance</h2>
     
+    **BPECS_A:** using the following algorithm "Fixed threshold, moving average filter and offset correction ("long" term drift) via gradient calculation (=> recommended)"
+    
+    T1: 0 up to 10 mm (small iron nail - 1.2 mm diameter and 30 mm length)
+    
+    T2: 0 up to 40 mm (10 cent coin)
+    
+    T3: 0 up to 40 mm (1 cent coin)
 
 <h2>Future changes</h2>
 
