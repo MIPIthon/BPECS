@@ -59,7 +59,7 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
 
 <h2>Modes of operation </h2>
 
-    **BPECS_A:** Frequency counter using the internal or external oscillator. 
+**BPECS_A:** Frequency counter using the internal or external oscillator. 
     
     -> Fixed threshold based detection and offset determined once (=> not recommended)
     
@@ -70,7 +70,7 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
     -> Fixed threshold, moving average filter and offset correction ("long" term drift) via gradient calculation (=> recommended)
     Drawback: User needs to move detector over object to detect it (conductive and magnetic can only be differentiated, via approach or withdrawing from the target.)
 
-    **BPECS_B:** Frequency counter using the internal or external oscillator. 
+**BPECS_B:** Frequency counter using the internal or external oscillator. 
 
     -> Fixed threshold based detection and offset determined once (=> not recommended)
     
@@ -83,7 +83,7 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
 
 <h2>Detection performance</h2>
     
-    **BPECS_A:** using the following algorithm "Fixed threshold, moving average filter and offset correction ("long" term drift) via gradient calculation (=> recommended)"
+**BPECS_A:** using the following algorithm "Fixed threshold, moving average filter and offset correction ("long" term drift) via gradient calculation (=> recommended)"
     
     T1: 0 up to 10 mm (small iron nail - 1.2 mm diameter and 30 mm length)
     
