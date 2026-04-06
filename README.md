@@ -31,12 +31,12 @@ This project uses microcontroller by Microchip (8-Bit) PIC12/PIC16 to integrate 
       PIC16F1764
       
       16 MHz external oscillator (+/- 50 ppm)
-      
+
       Output via four LEDs and UART
 
       Added analog multiplexer to measure two probes
       
-      Without eddy current probe
+      Without eddy current probe - uses two eddy current probes (from BPECS_A) Ls=346 uH, Rs = 29 Ohm at 1 kHz
     
 
 <h2>Principle of operation</h2>
@@ -91,6 +91,19 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
     
     T3: 0 up to 40 mm (1 cent coin)
 
+**BPECS_B:** using the following algorithm "Fixed threshold, correct long term drift by difference between two probes  (=> recommended)"
+    
+    T1: 0 up to 10 mm (small iron nail - 1.2 mm diameter and 30 mm length)
+    
+    T2: 0 up to 40 mm (10 cent coin)
+    
+    T3: 0 up to 40 mm (1 cent coin)
+
+Revision A and B achieve the same sensitivity:
+
+    -> same coil system
+    -> reciprocal counter implemented in the same way and same oscillator type used
+
 <h2>Future changes</h2>
 
     1) Add different colored LED bar (>=8 LEDs) controlled via a shift register to visualize the slope of the signal. 
@@ -99,5 +112,10 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
     2) Add MCP1640 boost converter to allow operation from single AA or AAA cell. 
     Boost converter could be switched via reed switch.
 
-    3) ...
-    
+    3) Implementation of the reciprocal counter using the Timer0 Overflow is a weak point as it limits the resolution 
+    due to the fact the external clock signal (T0) from the comparator (LC oscillator) is always synchronized to the instruction
+    clock Fcy, hence only Fcy (4 MHz) instead of Fosc (16 MHz) is a meaningful choice as a clock input for Timer1 to
+    measure the time between two overflows of T0. Timer0 is required as a frequency divider. 
+    -> Option 1: External frequency divider (e.g. SN74HC4040DR)
+
+    4) ...
