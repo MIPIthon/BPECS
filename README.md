@@ -45,7 +45,7 @@ This project uses microcontroller by Microchip (8-Bit) PIC12/PIC16 to integrate 
 
 <h2>Principle of operation</h2>
 
-LC oscillator based on MCU internal push pull output comparator with integrated hysteresis. Frequency measurement via a reciprocal counter realized with timer0 overflow as gate signal for timer1 (timer1 in signel shot toggle mode). 
+LC oscillator based on MCU internal push pull output comparator with integrated hysteresis. Frequency measurement via a reciprocal counter realized with timer0 overflow as gate signal for timer1 (timer1 in signel shot toggle mode). Timer0 is operating as a frequency divider.
 
 Detection algorithm is based on signal change rather than absolute value detection, hence the risk of false positive detection due to changing environmental conditions is reduced. C0G/NP0 capacitors for the tank circuit are still highly recommended.
 
@@ -56,10 +56,21 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
 **BPECS_A:**
 
     Isup = 3 mA (LED off) 
-    
     Isup = 4.25 mA (LED on)
 
     Probe: BPECS_A PCB probe with fres=94.5 kHz
+
+ **BPECS_B:**
+
+    Isup_5V = 3.84 mA (All LEDs off) 
+    Isup_5V = 5.18 mA (One LED on) 
+    Isup_5V = 6.50 mA (Two LEDs on)
+    
+    Isup_9V = 3.87 mA (All LEDs off) 
+    Isup_9V = 5.18 mA (One LED on) 
+    Isup_9V = 6.51 mA (Two LEDs on) 
+
+    Probe: BPECS_A PCB probes with fres=127.7 kHz   
 
 <h2>Modes of operation </h2>
 
