@@ -1,13 +1,15 @@
 <h1>Project Title: BPECS (Battery Powered Eddy Current Sensor)</h1>
 
-The purpose of this project is to design a low-cost battery powered eddy current sensor intended for metal detection of objects made out of magnetic and conductive materials.
+The purpose of this project is to design a low-cost battery powered eddy current sensor intended for detection of objects made out of magnetic and conductive materials.
 
 This project uses microcontroller by Microchip (8-Bit) PIC12/PIC16 to integrate most of the functionality in a single device.
 
 <h2>HW revisions and description</h2>
 
 **BPECS_A:**
-    
+
+![BPECS_A](/BPECS_A/images/BPECS_A.jpg)
+
       2L HASL PCB
       
       PIC12F1572
@@ -25,6 +27,8 @@ This project uses microcontroller by Microchip (8-Bit) PIC12/PIC16 to integrate 
       Single LED to visualize a positive or negative gradient is not really optimal from a user perspective.
 
 **BPECS_B:**
+
+![BPECS_B](/BPECS_B/images/BPECS_B.jpg)
 
       4L ENIG PCB
       
@@ -79,10 +83,15 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
     -> Fixed threshold, moving average filter and offset correction ("long" term drift) via gradient calculation (=> recommended)
     Drawback: User needs to move detector over object to detect it (conductive and magnetic can only be differentiated via approaching or withdrawing from the target.)
 
-    -> Fixed threshold, correct long term drift by difference between two probes  (=> recommended)
+    -> Fixed threshold, correct long term drift (and e.g. capacitor drift) by difference between two probes.  (=> recommended)
+
+
+<h2>Targets </h2>
+
+![Targets](/BPECS_A/documentation/targets/targets_overview.jpg)
 
 <h2>Detection performance</h2>
-    
+
 **BPECS_A:** using the following algorithm "Fixed threshold, moving average filter and offset correction ("long" term drift) via gradient calculation (=> recommended)"
     
     T1: 0 up to 10 mm (small iron nail - 1.2 mm diameter and 30 mm length)
