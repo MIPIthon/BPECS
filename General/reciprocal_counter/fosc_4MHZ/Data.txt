@@ -1,0 +1,7 @@
+fref = 4 MHz 
+fres = 25 Hz (at 100 kHz, N=1024)
+fgate = 100 Hz
+
+fref = 16 MHz
+fres = 0.6 Hz (at 100 kHz, N=1024)
+fgate = 100 Hz

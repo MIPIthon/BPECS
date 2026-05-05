@@ -1,0 +1,1 @@
+Comparison between Gated Timer vs. Reciprocal Counter
