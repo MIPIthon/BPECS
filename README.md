@@ -1,4 +1,4 @@
-<h1>Project Title: BPECS (Battery Powered Eddy Current Sensor)</h1>
+<h1>BPECS (Battery Powered Eddy Current Sensor)</h1>
 
 The purpose of this project is to design a low-cost battery powered eddy current sensor intended for detection of objects made out of magnetic and conductive materials.
 
