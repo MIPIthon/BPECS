@@ -72,7 +72,7 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
 
     Probe: BPECS_A PCB probes with fres=127.7 kHz   
 
-<h2>Gated Timer vs. Reciprocal Timer</h2>
+<h2>Gated Counter vs. Reciprocal Timer</h2>
 
 | Description | fosc = 4 MHz | fosc = 16 MHz |
 | --- | --- | --- |
@@ -80,6 +80,12 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
 | Resolution [Hz] | ![Reciprocal](/General/reciprocal_counter/fosc_4MHZ/resolution_hz.svg) | ![Reciprocal](/General/reciprocal_counter/fosc_16MHZ/resolution_hz.svg) |
 | Relative resolution [%] | ![Reciprocal](/General/reciprocal_counter/fosc_4MHZ/relative_resolution_percent.svg) | ![Reciprocal](/General/reciprocal_counter/fosc_16MHZ/relative_resolution_percent.svg) |
 | Relative resolution [ppm] | ![Reciprocal](/General/reciprocal_counter/fosc_4MHZ/relative_resolution_ppm.svg) | ![Reciprocal](/General/reciprocal_counter/fosc_16MHZ/relative_resolution_ppm.svg) |
+
+| Reciprocal fref = 4 MHz | Reciprocal fref = 16 MHz | Gated Counter tgate = 10 ms |
+| --- | --- | --- |
+| fres = 25 Hz (at 100 kHz, N=1024) | fres = 0.6 Hz (at 100 kHz, N=1024) | fres = 100 Hz |
+| fgate = 100 Hz | fgate = 100 Hz | fgate = 100 Hz |
+
 
 <h2>Modes of operation</h2>
 
