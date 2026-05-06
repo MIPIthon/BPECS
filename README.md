@@ -74,7 +74,7 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
 
 <h2>Gated Counter vs. Reciprocal Timer</h2>
 
-| Description | fosc = 4 MHz | fosc = 16 MHz |
+| Description | fref = 4 MHz | fref = 16 MHz |
 | --- | --- | --- |
 | Update rate [Hz] | ![Reciprocal](/General/reciprocal_counter/fosc_4MHZ/gate_frequency.svg) | ![Reciprocal](/General/reciprocal_counter/fosc_16MHZ/gate_frequency.svg) |
 | Resolution [Hz] | ![Reciprocal](/General/reciprocal_counter/fosc_4MHZ/resolution_hz.svg) | ![Reciprocal](/General/reciprocal_counter/fosc_16MHZ/resolution_hz.svg) |
@@ -86,6 +86,7 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
 | fres = 25 Hz (at 100 kHz, N=1024) | fres = 0.6 Hz (at 100 kHz, N=1024) | fres = 100 Hz |
 | fgate = 100 Hz | fgate = 100 Hz | fgate = 100 Hz |
 
+With the given hardware based on the circuits of BPECS_A and BPECS_B, we can only use fcy = fosc/4 = 16 MHz/4 = 4 MHz instead of 16 MHz due to the fact Timer0 synchronizes the signal to fcy. Timer0 (8 bit counter) prescaler equals 4, which means the used N equals 1024.
 
 <h2>Modes of operation</h2>
 
