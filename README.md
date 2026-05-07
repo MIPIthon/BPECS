@@ -72,7 +72,7 @@ The usage of an external oscillator instead of the internal RC oscillator greatl
 
     Probe: BPECS_A PCB probes with fres=127.7 kHz   
 
-<h2>Gated Counter vs. Reciprocal Timer</h2>
+<h2>Gated Counter vs. Reciprocal Counter</h2>
 
 | Description | fref = 4 MHz | fref = 16 MHz |
 | --- | --- | --- |
