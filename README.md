@@ -135,6 +135,8 @@ With the given hardware based on the circuits of BPECS_A and BPECS_B, we can onl
     
     T3: 0 up to 40 mm (1 cent coin)
 
+![Targets](/BPECS_B/documentation/BPECS_B_differential_mode_operation.gif)
+
 Revision A and B achieve the same sensitivity:
 
     -> same coil system
