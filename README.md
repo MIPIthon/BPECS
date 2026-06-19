@@ -149,6 +149,7 @@ Revision A and B achieve the same sensitivity:
     
     2) Add MCP1640 boost converter to allow operation from single AA or AAA cell. 
     Boost converter could be switched via reed switch.
+    <br>OR</br> keep current implementation: Linear regulator, 9V battery and add a switch.
 
     3) Implementation of the reciprocal counter using the Timer0 Overflow is a weak point as it limits the resolution 
     due to the fact the external clock signal (T0) from the comparator (LC oscillator) is always synchronized to the instruction
@@ -157,11 +158,12 @@ Revision A and B achieve the same sensitivity:
     
     -> Option 1: External frequency divider (e.g. SN74HC4040DR)
     -> Option 2: Use PIC12F1612 instead of PIC12F1572 => Timer6 used as prescaler (divider) for SMT1 (24 Bit counter). 
-    Can be asynchronous, hence resolution advantage compared to the previous implementation. 
+    Can be asynchronous, hence resolution advantage compared to the previous implementation (16 MHz instead of 4 MHz). 
     The 24-Bit counter value helps to utilize the increased resolution. 
-    Advantages: No additional external components, frequency divider is SW configurable 
+    <br>Advantages:</br> No additional external components, frequency divider is SW configurable 
     (prescaler options 1:1, 1:2, 1:4, 1:8, 1:16, 1:32, 1:64 and 1:128), 
     in addition the PR6 register can be adjusted between 1 and 255. 
     The total number of periods can be minimum 1*1 and up to 128*255 maximum. 
+    <br>Disadvantages:</br> Higher price, no HW-UART
           
-    4) ...
+    4) Add passive piezo buzzer as an alternative to the LED
