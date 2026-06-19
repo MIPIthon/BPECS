@@ -156,6 +156,12 @@ Revision A and B achieve the same sensitivity:
     measure the time between two overflows of T0. Timer0 is required as a frequency divider.
     
     -> Option 1: External frequency divider (e.g. SN74HC4040DR)
-    -> Option 2: Use PIC12F1612 instead of PIC12F1572 => Timer6 used as prescaler (divider) for SMT1 (24 Bit counter). Can be asynchronous, hence resolution advantage compared to the previous implementation. The 24-Bit counter value helps to utilize the increased resolution. Advantages: No additional external components, frequency divider is SW configurable (prescaler options 1:1, 1:2, 1:4, 1:8, 1:16, 1:32, 1:64 and 1:128), in addition the PR6 register can be adjusted between 1 and 255. The total number of periods can be minimum 1*1 and up to 128*255 maximum. 
+    -> Option 2: Use PIC12F1612 instead of PIC12F1572 => Timer6 used as prescaler (divider) for SMT1 (24 Bit counter). 
+    Can be asynchronous, hence resolution advantage compared to the previous implementation. 
+    The 24-Bit counter value helps to utilize the increased resolution. 
+    Advantages: No additional external components, frequency divider is SW configurable 
+    (prescaler options 1:1, 1:2, 1:4, 1:8, 1:16, 1:32, 1:64 and 1:128), 
+    in addition the PR6 register can be adjusted between 1 and 255. 
+    The total number of periods can be minimum 1*1 and up to 128*255 maximum. 
           
     4) ...
