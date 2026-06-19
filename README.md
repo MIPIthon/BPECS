@@ -160,6 +160,7 @@ Revision A and B achieve the same sensitivity:
     -> Option 2: Use PIC12F1612 instead of PIC12F1572 => Timer6 used as prescaler (divider) for SMT1 (24 Bit counter). 
     Can be asynchronous, hence resolution advantage compared to the previous implementation (16 MHz instead of 4 MHz). 
     The 24-Bit counter value helps to utilize the increased resolution. 
+
     
     Advantages: No additional external components, frequency divider is SW configurable 
     (prescaler options 1:1, 1:2, 1:4, 1:8, 1:16, 1:32, 1:64 and 1:128), 
